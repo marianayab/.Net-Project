@@ -1,0 +1,132 @@
+﻿<Window x:Class="PAC_Man_Game_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PAC_Man_Game_WPF"
+        mc:Ignorable="d"
+       Title="PAC Man Game " Height="609" Width="814">
+    <Canvas Name="CanvasOne" KeyDown="CanvasKeyDown" Focusable="True" Background="Black">
+        <Label FontSize="20" Name="txtScore" Foreground="White" Content="Score: 0" />
+        <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="50" Canvas.Top="104" />
+        <Rectangle Name="redGuy" Tag="ghost" Width="30" Height="30" Fill="Red" Canvas.Left="173" Canvas.Top="29" />
+        <Rectangle Name="orangeGuy" Tag="ghost" Width="30" Height="30" Fill="Orange" Canvas.Left="651" Canvas.Top="104" />
+        <Rectangle Name="pinkGuy" Tag="ghost" Width="30" Height="30" Fill="Pink" Canvas.Left="173" Canvas.Top="404" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="634" Canvas.Left="86" Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="468" Canvas.Left="161" Canvas.Top="158" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="124" Canvas.Left="76" Canvas.Top="339" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="124" Canvas.Left="86" Canvas.Top="467" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="124" Canvas.Left="596" Canvas.Top="467" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="20" Width="124" Canvas.Left="596" Canvas.Top="339" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="187" Width="20" Canvas.Left="76" Canvas.Top="155" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="187" Width="20" Canvas.Left="700" Canvas.Top="155" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="110" Width="20" Canvas.Left="609" Canvas.Top="178" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="110" Width="20" Canvas.Left="161" Canvas.Top="178" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="82" Width="20" Canvas.Left="86" Canvas.Top="485" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="82" Width="20" Canvas.Left="700" Canvas.Top="485" />
+        <Rectangle Tag="wall" Stroke="Blue" StrokeThickness="3" Height="82" Width="76" Canvas.Left="361" Canvas.Top="485" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="211" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="161" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="317" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="263" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="423" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="373" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="521" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="476" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.047,0.671" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="222" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="222" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-0.32,0.644" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="263" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="263" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="288" Canvas.Top="248" RenderTransformOrigin="0.08,0.724" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="288" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="329" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="1.16,0.884" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="329" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="352" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="352" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="400" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="400" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="444" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="444" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="1.68,0.644" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="465" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="465" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="505" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="505" Canvas.Top="200" RenderTransformOrigin="0.08,0.644" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="525" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="525" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="564" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="564" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="584" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="584" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="187" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="143" Canvas.Top="49" RenderTransformOrigin="-1,0.644" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="261" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="224" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="361" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="308" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="465" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="404" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="557" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="520" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="657" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="604" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="700" Canvas.Top="49" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="570" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="619" Canvas.Top="134" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="187" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="143" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="261" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="224" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="361" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="308" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="465" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="404" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="557" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="520" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="657" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="604" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="700" Canvas.Top="404" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="515" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="515" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="542" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="542" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="574" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="574" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="603" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="603" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="630" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="630" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="662" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="662" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="132" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="132" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="158" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="158" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="190" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="190" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="220" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="220" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="246" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="246" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="278" Canvas.Top="544" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="278" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="96" Canvas.Top="404" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="200" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="200" Canvas.Top="248" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.16,0.744" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="402" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="404" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="347" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="349" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="290" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="241" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="198" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="287" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="238" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="195" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="741" Canvas.Top="155" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="50" Canvas.Top="158" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Rectangle Tag="food" Height="10" Width="10" Fill="yellow" Canvas.Left="96" Canvas.Top="49" RenderTransformOrigin="-1,0.644" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    </Canvas>
+
+
+
+</Window>
